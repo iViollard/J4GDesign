@@ -4,9 +4,52 @@
  * Licensed at WrapBootstrap, visit WrapBootstrap to purchase a usage license for this theme (https://wrapbootstrap.com/)
  */
 
+:root {
+    --J4GBlue: #0084b8;
+    --BGGrey: #eaf3f7;
+    --LinkBlue: #158ccb;
+    --Offwhite: #fbfdff;
+    --Stars: #ffc238;
+    --Border: #e1e1e1;
+    --Black: #000;
+    --222: #222;
+}
+
+/* Icons */
+
+.primary {
+  fill: var(--J4GBlue); }
+
+.secondary {
+  fill: #0D2B3E; }
+
+h2 svg {
+    height: 40px;
+}
+
+h3 svg {
+    height: 32px;
+}
+
+svg {
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
 html,
 body {
     height: 100%;
+}
+
+span.process {
+    display: block;
+    margin-left: 48px;
+}
+
+.HomeBgImage {
+    background-image: url('../../assets/img/SitesBG5.jpg')!important;
+    background: no-repeat center center scroll;
+    background-size: cover;
 }
 
 .justify p {
@@ -26,7 +69,7 @@ section {
 }
 
 section.bg-gray {
-    background-color: #f5f5f5;
+    background-color: var(--BGGrey);
 }
 
 @media(max-width:767px) {
@@ -46,10 +89,11 @@ body {
 }
 
 a {
-    color: #00adef;
+    color: var(--LinkBlue);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
+    font-style: italic;
 }
 
 a:hover,
@@ -68,7 +112,7 @@ p.lead {
     font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 24px;
     font-weight: 600;
-    color:#0084b8;
+    color:var(--J4GBlue);
 }
 
 h1,
@@ -79,34 +123,25 @@ h5,
 h6 {
     text-transform: uppercase;
     font-family: Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 600;
-    color:#0084b8;
+    font-weight: 400;
+    color:var(--J4GBlue);
+    line-height: 1.5em;
 }
 
 .pricing h1, .pricing h2, .pricing h3, .pricing h4, .pricing h5, .pricing h6, .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
-    color:#ffffff;
+    color:var(--Offwhite);
 } 
 
 .pricing-item h1, .pricing-item h2, .pricing-item h3, .pricing-item h4, .pricing-item h5, .pricing-item h6 {
-    color:#0084b8;
-}
-
-@media(min-width:481px) {
-    h1 {
-        font-size: 52px;
-    }
-
-    h2 {
-        font-size: 50px;
-    }
+    color:var(--J4GBlue);
 }
 
 hr {
     height: 2px;
     margin: 15px auto;
     max-width: 100px;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-top: 1px solid var(--Offwhite);
+    border-bottom: 1px solid var(--Offwhite);
 }
 
 hr.left {
@@ -118,7 +153,7 @@ hr.right {
 }
 
 hr.colored {
-    border-color: #00adef;
+    border-color: var(--LinkBlue);
 }
 
 @media(min-width:768px) {
@@ -137,7 +172,8 @@ hr.colored {
 }
 
 .text-primary {
-    color: #00adef;
+    color: var(--LinkBlue);
+    font-weight: 500;
 }
 
 .navbar-default .navbar-nav>.active>a,
@@ -147,16 +183,16 @@ hr.colored {
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>.active>a:focus {
     border-radius: 0;
-    color: #00adef;
-    background-color: #fff;
+    color: var(--LinkBlue);
+    background-color: var(--Offwhite);
 }
 
 .navbar-default {
-    background-color: #00adef;
+    background-color: var(--LinkBlue);
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color: var(--Offwhite);
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -170,7 +206,7 @@ hr.colored {
 }
 
 .navbar-inverse {
-    background-color: #00adef;
+    background-color: var(--LinkBlue);
 }
 
 .navbar-default,
@@ -183,7 +219,7 @@ hr.colored {
 .navbar-inverse .navbar-brand {
     padding: 0 15px;
     text-decoration: none;
-    color: #fff;
+    color: var(--Offwhite);
     opacity: 1;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -199,7 +235,7 @@ hr.colored {
 
 .navbar-default .navbar-nav li a,
 .navbar-inverse .navbar-nav li a {
-    color: #fff;
+    color: var(--Offwhite);
 }
 
 .navbar-default .navbar-nav li a:hover,
@@ -256,7 +292,7 @@ header {
     min-height: 100%;
     background: no-repeat center center;
     background-attachment: scroll;
-    background-color: #222;
+    background-color: var(--222);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -266,7 +302,7 @@ header {
 header .intro-content {
     position: relative;
     text-align: center;
-    color: #fff;
+    color: var(--Offwhite);
 }
 
 header .brand-name {
@@ -300,12 +336,12 @@ header .scroll-down .btn {
     width: 50px;
     height: 50px;
     padding: 0;
-    border: 2px solid #fff;
+    border: 2px solid var(--Offwhite);
     border-radius: 100%;
     font-size: 30px;
     line-height: 50px;
     letter-spacing: normal;
-    color: #fff;
+    color: var(--Offwhite);
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -332,7 +368,7 @@ header .scroll-down .btn:hover {
         width: 50%;
         margin: auto;
         text-align: center;
-        color: #fff;
+        color: var(--Offwhite);
         -webkit-transform: translate(-50%,-50%);
         -ms-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
@@ -366,7 +402,7 @@ header.video .overlay {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: #000;
+    background: var(--Black);
 }
 
 header.video .intro-content {
@@ -386,9 +422,9 @@ header.video .scroll-down {
 aside.cta-quote {
     padding: 100px 0;
     text-align: center;
-    color: #fff;
+    color: var(--Offwhite);
     background: no-repeat center center scroll;
-    background-color: #222;
+    background-color: var(--222);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -433,6 +469,11 @@ aside.cta-quote span.quote {
 
 .testimonials {
     text-align: center;
+    color: var(--Offwhite);
+}
+
+.testimonials p.lead {
+    color: var(--Offwhite);
 }
 
 .testimonials .testimonials-carousel .item {
@@ -474,7 +515,7 @@ aside.cta-quote span.quote {
 }
 
 .testimonials .testimonials-carousel .item .testimonial-info .testimonial-author .stars {
-    color: #f1c40f;
+    color: var(--Stars);
 }
 
 .testimonials .testimonials-carousel .owl-controls {
@@ -494,8 +535,8 @@ aside.cta-quote span.quote {
     text-align: center;
     font-size: 30px!important;
     line-height: 50px;
-    color: #fff!important;
-    background-color: #00adef!important;
+    color: var(--Offwhite)!important;
+    background-color: var(--LinkBlue)!important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -530,7 +571,6 @@ aside.cta-quote span.quote {
 }
 
 .manyBrokenBlock {
-    min-height:300px;
     margin-top: 30px;
 }
 
@@ -574,7 +614,7 @@ aside.cta-quote span.quote {
 
 .about-carousel .item .caption ul.social li a:hover,
 .about-carousel .item .caption ul.social li a:focus {
-    color: #fff;
+    color: var(--Offwhite);
 }
 
 .about-carousel .owl-controls {
@@ -593,8 +633,8 @@ aside.cta-quote span.quote {
     text-align: center;
     font-size: 30px!important;
     line-height: 50px;
-    color: #fff!important;
-    background-color: #00adef!important;
+    color: var(--Offwhite)!important;
+    background-color: var(--LinkBlue)!important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -620,7 +660,7 @@ aside.cta-quote span.quote {
 .services .media i.fa {
     width: 75px;
     height: 75px;
-    border: 3px solid #222;
+    border: 3px solid var(--222);
     border-radius: 100%;
     text-align: center;
     font-size: 30px;
@@ -652,15 +692,15 @@ aside.cta-quote span.quote {
 
 .portfolio-carousel {
     padding: 0;
-    color: #fff;
-    background-color: #222;
+    color: var(--Offwhite);
+    background-color: var(--222);
 }
 
 .portfolio-carousel .item {
     padding: 50px 55px;
     text-align: center;
     background: no-repeat center center scroll;
-    background-color: #222;
+    background-image: linear-gradient(-45deg, grey, black);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -711,8 +751,8 @@ aside.cta-quote span.quote {
     text-align: center;
     font-size: 30px!important;
     line-height: 70px;
-    color: #fff!important;
-    background-color: #00adef!important;
+    color: var(--Offwhite)!important;
+    background-color: var(--LinkBlue)!important;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     transition: all .5s;
@@ -782,7 +822,7 @@ aside.cta-quote span.quote {
     border: 0;
     border-radius: 0;
     text-align: center;
-    color: #fff;
+    color: var(--Offwhite);
     background: 0 0;
     background-clip: border-box;
     -webkit-box-shadow: none;
@@ -821,7 +861,7 @@ aside.cta-quote span.quote {
     width: 1px;
     height: 75px;
     margin-left: 35px;
-    background-color: #fff;
+    background-color: var(--Offwhite);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -831,16 +871,16 @@ aside.cta-quote span.quote {
     z-index: 1052;
     width: 1px;
     height: 75px;
-    background-color: #fff;
+    background-color: var(--Offwhite);
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
 
 .pricing {
-    color: #fff;
+    color: var(--Offwhite);
     background: no-repeat center center scroll;
-    background-color: #222;
+    background-color: var(--222);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -852,8 +892,8 @@ aside.cta-quote span.quote {
     margin-bottom: 30px;
     padding: 30px;
     text-align: center;
-    color: #222;
-    background: #fff;
+    color: var(--222);
+    background: var(--Offwhite);
     -webkit-box-shadow: 0 0 30px 5px rgba(34,34,34,.75);
     -moz-box-shadow: 0 0 30px 5px rgba(34,34,34,.75);
     box-shadow: 0 0 30px 5px rgba(34,34,34,.75);
@@ -922,7 +962,7 @@ aside.cta-quote span.quote {
     position: relative;
     margin-bottom: 0;
     padding-bottom: .5em;
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid var(--Border);
 }
 
 .floating-label-form-group input,
@@ -958,7 +998,7 @@ aside.cta-quote span.quote {
 
 .floating-label-form-group::not(:first-child) {
     padding-left: 14px;
-    border-left: 1px solid #e1e1e1;
+    border-left: 1px solid var(--Border);
 }
 
 .floating-label-form-group-with-value label {
@@ -967,11 +1007,11 @@ aside.cta-quote span.quote {
 }
 
 .floating-label-form-group-with-focus label {
-    color: #00adef;
+    color: var(--LinkBlue);
 }
 
 form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #e1e1e1;
+    border-top: 1px solid var(--Border);
 }
 
 footer.footer {
@@ -993,7 +1033,7 @@ footer.footer a {
 }
 
 footer.footer a:hover {
-    color: #fff;
+    color: var(--Offwhite);
 }
 
 footer.footer p {
@@ -1019,8 +1059,8 @@ footer.footer .copyright p.small {
 }
 
 .btn-outline-light {
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid var(--Offwhite);
+    color: var(--Offwhite);
     background: 0 0;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -1030,13 +1070,13 @@ footer.footer .copyright p.small {
 .btn-outline-light:hover,
 .btn-outline-light:focus {
     outline: 0;
-    color: #00adef;
-    background: #fff;
+    color: var(--LinkBlue);
+    background: var(--Offwhite);
 }
 
 .btn-outline-dark {
-    border: 1px solid #222;
-    color: #222;
+    border: 1px solid var(--222);
+    color: var(--222);
     background: 0 0;
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -1045,10 +1085,10 @@ footer.footer .copyright p.small {
 
 .btn-outline-dark:hover,
 .btn-outline-dark:focus {
-    border-color: #00adef;
+    border-color: var(--LinkBlue);
     outline: 0;
-    color: #fff;
-    background: #00adef;
+    color: var(--Offwhite);
+    background: var(--LinkBlue);
 }
 
 .btn {
@@ -1057,6 +1097,7 @@ footer.footer .copyright p.small {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 1px;
+    font-style: italic;
 }
 
 .btn:focus,
@@ -1073,17 +1114,17 @@ footer.footer .copyright p.small {
     font-size: 26px;
     font-weight: 200;
     letter-spacing: normal;
-    color: #fff;
-    background-color: #222;
+    color: var(--Offwhite);
+    background-color: var(--222);
 }
 
 .btn-full-width:hover {
-    color: #fff;
-    background-color: #00adef;
+    color: var(--Offwhite);
+    background-color: var(--LinkBlue);
 }
 
 .btn-full-width:focus {
-    color: #fff;
+    color: var(--Offwhite);
 }
 
 body.modern {
@@ -1184,4 +1225,59 @@ body.vintage .testimonials .testimonials-carousel .item .testimonial-info .testi
 body.vintage .testimonials .testimonials-carousel .owl-controls .owl-prev,
 body.vintage .testimonials .testimonials-carousel .owl-controls .owl-next {
     line-height: 55px;
+}
+
+span.keyword::after{
+    content: "/";
+    font-weight: 600;
+    margin: 0 20px;
+    color: var(--J4GBlue);
+}
+
+span.keyword.last::after {
+    content: none;
+}
+
+h3 {
+    margin-top: 50px;
+}
+
+h4 {
+    margin-top:50px;
+    margin-bottom:20px
+}
+
+.offer {
+    margin: auto;
+    width: 70%;
+}
+
+ul#designPrinciples li {
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+    padding:4px;
+    border-radius: 20px;
+    border: 1px solid var(--J4GBlue);
+    background: var(--J4GBlue);
+    color: var(--Offwhite);
+}
+
+ul#designPrinciples {
+    list-style-type: none;
+    margin-top:40px;
+}
+
+#principles {
+    margin-top: 40px;
+}
+
+.portfolio-carousel .item .project-details .project-description {
+    line-height: 30px;
+}
+
+.portfolio-carousel .item .project-details .project-name {
+    margin-top:70px;
+    margin-bottom:20px;
 }
