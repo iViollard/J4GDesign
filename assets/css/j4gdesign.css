@@ -1313,3 +1313,7 @@ ul#designPrinciples {
 .HomeBgImage a, footer.HomeBgImage a {
     color: var(--Stars);
 }
+
+.blue {
+    color: var(--J4GBlue);
+}
