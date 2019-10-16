@@ -1323,3 +1323,12 @@ ul#designPrinciples {
     margin-top: 50px;
     font-size: 1.5em!important;
 }
+
+.italic {
+    font-style: italic;
+}
+
+.locations {
+    font-size: 1.2em!important;
+    margin-top: 20px!important;
+}
