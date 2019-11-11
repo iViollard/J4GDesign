@@ -30,7 +30,8 @@ h2 svg {
     height: 40px;
 }
 
-h3 svg, h4 svg {
+h3 svg,
+h4 svg {
     height: 32px;
     margin-bottom: 5px;
 }
@@ -149,7 +150,7 @@ h6 {
 .footer h3,
 .footer h4,
 .footer h5,
-.footer h6, 
+.footer h6,
 .copyright {
     color: var(--Offwhite);
 }
@@ -336,9 +337,9 @@ header .brand-name {
 }
 
 header .brand-name-subtext {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
-    line-height: 20px;
+    line-height: 50px;
     margin-top: 50px;
 }
 
@@ -399,8 +400,8 @@ header .scroll-down .btn:hover {
         line-height: 80px;
     }
     header .brand-name-subtext {
-        font-size: 30px;
-        line-height: 30px;
+        font-size: 25px;
+        line-height: 50px;
     }
     header img {
         max-height: 300px;
@@ -707,14 +708,19 @@ aside.cta-quote span.quote {
     }
 }
 
+.carousel-caption,
 .portfolio-carousel {
     padding: 0;
     color: var(--Offwhite);
-    background-color: var(--222);
+    text-shadow: none;
 }
 
 .portfolio-carousel .item {
     text-align: center;
+}
+
+.portfolio-carousel .item,
+.portfolio-carousel {
     background: no-repeat center center scroll;
     background-image: linear-gradient(45deg, var(--J4GBlue), var(--222));
     -webkit-background-size: cover;
@@ -728,7 +734,7 @@ aside.cta-quote span.quote {
 }
 
 .content {
-    padding: 50px;
+    padding: 100px 50px;
 }
 
 .portfolio-carousel .item .portfolio-image {
@@ -741,6 +747,7 @@ aside.cta-quote span.quote {
     margin: 0 auto 25px;
 }
 
+.carousel .item .project-details .project-name,
 .portfolio-carousel .item .project-details .project-name {
     display: block;
     text-transform: uppercase;
@@ -752,9 +759,16 @@ aside.cta-quote span.quote {
     margin-bottom: 10px;
 }
 
+.carousel-caption .item .project-details .project-description,
 .portfolio-carousel .item .project-details .project-description {
     display: block;
     font-size: 18px;
+    line-height: 18px;
+}
+
+.carousel-caption .project-details .project-description {
+    display: block;
+    font-size: 20px;
     line-height: 18px;
 }
 
@@ -795,6 +809,7 @@ aside.cta-quote span.quote {
 }
 
 @media(min-width:992px) {
+    .carousel-caption,
     .portfolio-carousel .item {
         padding: 150px 55px;
         text-align: left;
@@ -805,15 +820,18 @@ aside.cta-quote span.quote {
     .portfolio-carousel .item .project-details img.client-logo {
         margin: 0 auto 25px 0;
     }
+    .carousel .item .project-details .project-name,
     .portfolio-carousel .item .project-details .project-name {
         display: block;
         font-size: 50px;
         line-height: 60px;
     }
+    .carousel-caption .item .project-details .project-description,
     .portfolio-carousel .item .project-details .project-description {
         font-size: 20px;
         line-height: 20px;
     }
+    .carousel .item hr.colored,
     .portfolio-carousel .item hr.colored {
         margin: 20px auto 20px 0;
     }
@@ -1042,7 +1060,8 @@ footer.footer a {
     color: rgba(255, 255, 255, .7);
 }
 
-footer.footer a:hover, .HomeBgImage a:hover {
+footer.footer a:hover,
+.HomeBgImage a:hover {
     color: var(--Offwhite);
     text-decoration: underline;
 }
@@ -1278,14 +1297,15 @@ ul#designPrinciples {
     list-style-type: none;
     margin-top: 40px;
     display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #principles {
     margin-top: 40px;
 }
 
+.carousel .item .project-details .project-description,
 .portfolio-carousel .item .project-details .project-description {
     line-height: 30px;
 }
@@ -1318,7 +1338,8 @@ ul#designPrinciples {
     margin-bottom: 30px;
 }
 
-.HomeBgImage a, footer.HomeBgImage a {
+.HomeBgImage a,
+footer.HomeBgImage a {
     color: var(--Stars);
 }
 
@@ -1326,9 +1347,10 @@ ul#designPrinciples {
     color: var(--J4GBlue);
 }
 
-.buzz {
+div.buzz {
     margin-top: 50px;
-    font-size: 1.5em!important;
+    font-size: 2em;
+    line-height: 65px;
 }
 
 .italic {
@@ -1338,4 +1360,84 @@ ul#designPrinciples {
 .locations {
     font-size: 1.2em!important;
     margin-top: 20px!important;
+}
+
+.margin0 {
+    margin: 0;
+}
+
+
+/*.tileContainer {
+    overflow: hidden;
+}
+
+.tile {
+    padding-bottom: 99999px;
+    margin-bottom: -99999px;
+    float: left;
+}*/
+
+.tileContainer img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+}
+
+@media(max-width:992px) {
+    .tile.img {
+        display: none;
+    }
+}
+
+.carousel-control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 75px;
+    margin: auto 0!important;
+    border-radius: 0!important;
+    text-align: center;
+    font-size: 30px!important;
+    line-height: 42px;
+    color: var(--Offwhite)!important;
+    background-color: var(--LinkBlue)!important;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    font-style: normal;
+}
+
+.carousel-control span.icon-next,
+.carousel-control span.icon-prev {
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    top: 40%;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+    background-color: var(--LinkBlue)!important;
+    background-image: var(--LinkBlue)!important;
+}
+
+.item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-inner div.item {
+    height: 100vh;
+}
+
+.carousel-inner .item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
