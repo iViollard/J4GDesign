@@ -89,6 +89,12 @@ section.bg-gray {
     }
 }
 
+@media(max-width:576px) {
+    div.carousel-caption {
+        bottom: 10%;
+    }
+}
+
 .owl-theme .owl-controls .owl-page span {
     background: rgba(34, 34, 34, .5);
 }
@@ -717,6 +723,8 @@ aside.cta-quote span.quote {
     padding: 0;
     color: var(--Offwhite);
     text-shadow: none;
+    position: absolute;
+    bottom: 30%;
 }
 
 .portfolio-carousel .item {
