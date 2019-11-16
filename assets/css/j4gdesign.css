@@ -497,6 +497,10 @@ aside.cta-quote span.quote {
     padding: 0;
 }
 
+.testimonials-carousel .item:after {
+    background: transparent;
+}
+
 .testimonials .testimonials-carousel .item p.quote {
     margin-bottom: 30px;
 }
@@ -1440,4 +1444,8 @@ div.buzz {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.margin100 {
+    margin-top: 100px;
 }
